@@ -414,6 +414,7 @@ ul {
 
     display: flex;
     flex-direction: column;
+    height: 75%;
     gap: 10px;
     position: fixed;
     padding: 15px;
@@ -500,7 +501,7 @@ ul {
 @media (max-width: 768px) {
 
     .compra{
-        display: ;
+        display: flex;
     }
     header {
         background: rgba(0, 0, 0, 0.75);
