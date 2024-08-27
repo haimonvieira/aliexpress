@@ -8,6 +8,19 @@
 
 }
 
+.offcanvas{
+
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+    width: 60% !important;
+
+}
+
+.offcanvas, .offcanvas-backdrop{
+    display: none;
+}
+
+
 header {
 
     top: 0;
@@ -19,17 +32,23 @@ header {
 
 }
 
-.container {
-
-    display: flex;
-    padding: 6px 48px 0;
+.navbar > .container-fluid{
+    flex-wrap: unset;
     justify-content: center;
-    align-items: center;
-    gap: 10px;
-
+    gap: 15px;
 }
 
-.container form {
+.navbar-toggler{
+    background: whitesmoke;
+    padding: 4px;
+}
+
+.navbar-toggler-icon{
+    width: 1em;
+    height: 1em;
+}
+
+.container-fluid form {
 
     display: flex;
     align-items: center;
@@ -41,7 +60,7 @@ header {
 
 }
 
-.container form input {
+.container-fluid form input {
 
     border: none;
     font-size: 15px;
@@ -77,6 +96,10 @@ header {
 }
 
 .categoria:hover .subcategoria {
+    display: flex;
+}
+
+.subcategoria:hover {
     display: flex;
 }
 
@@ -131,7 +154,11 @@ header {
 
 }
 
-.subcategoria:hover~.subcategoria_right {
+.subcategoria:hover ~ .subcategoria_right {
+    display: flex;
+}
+
+.subcategoria_right:hover {
     display: flex;
 }
 
@@ -139,7 +166,6 @@ header {
 
     display: flex;
     align-items: center;
-    text-align: center;
     gap: 10px;
 
 }
@@ -157,7 +183,7 @@ header {
     background: #757575;
     width: 22px;
     padding: 2px;
-    border-radius: 14px;
+    border-radius: 8px;
     text-align: center;
 
 }
@@ -468,6 +494,7 @@ ul {
 }
 
 .button {
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -477,6 +504,8 @@ ul {
     text-align: center;
     width: 100%;
     cursor: pointer;
+    color: black;
+    text-decoration: none;
 
 }
 
@@ -527,6 +556,11 @@ ul {
 
 }
 
+.navbar-toggler{
+    display: none;
+}
+
+
 @media(max-width: 1366px) {
 
     .informacao_entrega {
@@ -545,6 +579,14 @@ ul {
 }
 
 @media (max-width: 768px) {
+
+    .offcanvas, .offcanvas-backdrop{
+        display: flex;
+    }
+
+    .navbar-toggler{
+        display: flex;
+    }
 
     #toggle-mobile {
         display: none;
@@ -625,14 +667,15 @@ ul {
         background: black;
     }
 
-    .container form,
-    .container .header-right {
-        display: none;
+    .navbar .container-fluid{
+        margin-left: 10%;
+        margin-right: 10%;
+        justify-content: space-between;
     }
 
-    .container {
-        flex-direction: row-reverse;
-        justify-content: left;
+    .container-fluid form,
+    .container-fluid .header-right {
+        display: none;
     }
 
     .imagens_produtos {
